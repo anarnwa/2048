@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "JS 2048", "JS 2048\JS 2048.jsproj", "{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Debug|ARM.ActiveCfg = Debug|ARM
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Debug|ARM.Build.0 = Debug|ARM
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Debug|ARM.Deploy.0 = Debug|ARM
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Debug|x64.ActiveCfg = Debug|x64
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Debug|x64.Build.0 = Debug|x64
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Debug|x64.Deploy.0 = Debug|x64
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Debug|x86.ActiveCfg = Debug|x86
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Debug|x86.Build.0 = Debug|x86
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Debug|x86.Deploy.0 = Debug|x86
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Release|Any CPU.Build.0 = Release|Any CPU
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Release|ARM.ActiveCfg = Release|ARM
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Release|ARM.Build.0 = Release|ARM
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Release|ARM.Deploy.0 = Release|ARM
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Release|x64.ActiveCfg = Release|x64
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Release|x64.Build.0 = Release|x64
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Release|x64.Deploy.0 = Release|x64
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Release|x86.ActiveCfg = Release|x86
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Release|x86.Build.0 = Release|x86
+		{589B0FBF-2E69-4CA5-9FEF-0B5E4C0DE495}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB434BBD-B504-4A52-B384-14A78591F6F8}
+	EndGlobalSection
+EndGlobal
