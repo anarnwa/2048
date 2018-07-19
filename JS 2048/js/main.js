@@ -36,163 +36,167 @@ for (var i = 0; i < 4; i++) {
 }
 for (var i = 0; i < a.length; i++) {
     for (var j = 0; j < a[i].length; j++) {
-        a[i][j] = getrandomint();
+        a[i][j] = 0;
     }
 }
 document.onkeydown = function (event) {
-    var e = event  || window.event || arguments.callee.caller.arguments[0];
-    if (e && e.keyCode == 37) {
-        for (var q = 0; q < 3; q++) {
-            for (var i = 0; i < 4; i++) {
-                for (var j = 3; j > 0; j--) {
-                    if (a[i][j - 1] == 0) {
-                        a[i][j - 1] = a[i][j];
-                        a[i][j] = 0;
+    var e = event || window.event || arguments.callee.caller.arguments[0];
+    if (e && e.keyCode == 37 || e.keyCode == 38 || e.keyCode == 39 || e.keyCode == 40) {
+        if (e && e.keyCode == 37) {
+            for (var q = 0; q < 3; q++) {
+                for (var i = 0; i < 4; i++) {
+                    for (var j = 3; j > 0; j--) {
+                        if (a[i][j - 1] == 0) {
+                            a[i][j - 1] = a[i][j];
+                            a[i][j] = 0;
+                        }
                     }
                 }
             }
-        }
-        for (var i = 0; i < 4; i++) {
-            for (var j = 0; j < 3; j++) {
-                if (a[i][j] == a[i][j + 1]) {
-                    a[i][j] *= 2;
-                    a[i][j + 1] = 0;
-                }
-            }
-        }
-        for (var q = 0; q < 3; q++) {
-            for (var i = 0; i < 4; i++) {
-                for (var j = 3; j > 0; j--) {
-                    if (a[i][j - 1] == 0) {
-                        a[i][j - 1] = a[i][j];
-                        a[i][j] = 0;
-                    }
-                }
-            }
-        }
-    }
-    if (e && e.keyCode == 38) {
-        for (var q = 0; q < 3; q++) {
-            for (var i = 3; i > 0; i--) {
-                for (var j = 0; j < 4; j++) {
-                    if (a[i - 1][j] == 0) {
-                        a[i - 1][j] = a[i][j];
-                        a[i][j] = 0;
-                    }
-                }
-            }
-        }
-        for (var i = 0; i < 3; i++) {
-            for (var j = 0; j < 4; j++) {
-                if (a[i][j] == a[i + 1][j]) {
-                    a[i][j] *= 2;
-                    a[i + 1][j] = 0;
-                }
-            }
-        }
-        for (var q = 0; q < 3; q++) {
-            for (var i = 3; i > 0; i--) {
-                for (var j = 0; j < 4; j++) {
-                    if (a[i - 1][j] == 0) {
-                        a[i - 1][j] = a[i][j];
-                        a[i][j] = 0;
-                    }
-                }
-            }
-        }
-    }
-    if (e && e.keyCode == 39) {
-        for (var q = 0; q < 3; q++) {
             for (var i = 0; i < 4; i++) {
                 for (var j = 0; j < 3; j++) {
-                    if (a[i][j + 1] == 0) {
-                        a[i][j + 1] = a[i][j]
-                        a[i][j] = 0;
+                    if (a[i][j] == a[i][j + 1]) {
+                        a[i][j] *= 2;
+                        a[i][j + 1] = 0;
+                    }
+                }
+            }
+            for (var q = 0; q < 3; q++) {
+                for (var i = 0; i < 4; i++) {
+                    for (var j = 3; j > 0; j--) {
+                        if (a[i][j - 1] == 0) {
+                            a[i][j - 1] = a[i][j];
+                            a[i][j] = 0;
+                        }
                     }
                 }
             }
         }
-        for (var i = 0; i < 4; i++) {
-            for (var j=3; j >0; j--) {
-                if (a[i][j] == a[i][j - 1]) {
-                    a[i][j] *= 2;
-                    a[i][j - 1] = 0;
+        if (e && e.keyCode == 38) {
+            for (var q = 0; q < 3; q++) {
+                for (var i = 3; i > 0; i--) {
+                    for (var j = 0; j < 4; j++) {
+                        if (a[i - 1][j] == 0) {
+                            a[i - 1][j] = a[i][j];
+                            a[i][j] = 0;
+                        }
+                    }
+                }
+            }
+            for (var i = 0; i < 3; i++) {
+                for (var j = 0; j < 4; j++) {
+                    if (a[i][j] == a[i + 1][j]) {
+                        a[i][j] *= 2;
+                        a[i + 1][j] = 0;
+                    }
+                }
+            }
+            for (var q = 0; q < 3; q++) {
+                for (var i = 3; i > 0; i--) {
+                    for (var j = 0; j < 4; j++) {
+                        if (a[i - 1][j] == 0) {
+                            a[i - 1][j] = a[i][j];
+                            a[i][j] = 0;
+                        }
+                    }
                 }
             }
         }
-        for (var q = 0; q < 3; q++) {
+        if (e && e.keyCode == 39) {
+            for (var q = 0; q < 3; q++) {
+                for (var i = 0; i < 4; i++) {
+                    for (var j = 0; j < 3; j++) {
+                        if (a[i][j + 1] == 0) {
+                            a[i][j + 1] = a[i][j]
+                            a[i][j] = 0;
+                        }
+                    }
+                }
+            }
             for (var i = 0; i < 4; i++) {
-                for (var j = 0; j < 3; j++) {
-                    if (a[i][j + 1] == 0) {
-                        a[i][j + 1] = a[i][j]
-                        a[i][j] = 0;
+                for (var j = 3; j > 0; j--) {
+                    if (a[i][j] == a[i][j - 1]) {
+                        a[i][j] *= 2;
+                        a[i][j - 1] = 0;
+                    }
+                }
+            }
+            for (var q = 0; q < 3; q++) {
+                for (var i = 0; i < 4; i++) {
+                    for (var j = 0; j < 3; j++) {
+                        if (a[i][j + 1] == 0) {
+                            a[i][j + 1] = a[i][j]
+                            a[i][j] = 0;
+                        }
                     }
                 }
             }
         }
-    }
-    if (e && e.keyCode == 40) {
-        for (var q = 0; q < 3; q++) {
-            for (var i = 0; i < 3; i++) {
+        if (e && e.keyCode == 40) {
+            for (var q = 0; q < 3; q++) {
+                for (var i = 0; i < 3; i++) {
+                    for (var j = 0; j < 4; j++) {
+                        if (a[i + 1][j] == 0) {
+                            a[i + 1][j] = a[i][j];
+                            a[i][j] = 0;
+                        }
+                    }
+                }
+            }
+            for (var i = 3; i > 0; i--) {
                 for (var j = 0; j < 4; j++) {
-                    if (a[i + 1][j] == 0) {
-                        a[i + 1][j] = a[i][j];
-                        a[i][j] = 0;
+                    if (a[i][j] == a[i - 1][j]) {
+                        a[i][j] *= 2;
+                        a[i - 1][j] = 0;
+                    }
+                }
+            }
+            for (var q = 0; q < 3; q++) {
+                for (var i = 0; i < 3; i++) {
+                    for (var j = 0; j < 4; j++) {
+                        if (a[i + 1][j] == 0) {
+                            a[i + 1][j] = a[i][j];
+                            a[i][j] = 0;
+                        }
                     }
                 }
             }
         }
-        for (var i = 3; i >0 ; i--) {
-            for (var j = 0; j < 4; j++) {
-                if (a[i][j] == a[i - 1][j]) {
-                    a[i][j] *= 2;
-                    a[i - 1][j] = 0;
+        var q, p;
+        for (q = 0; q < 4; q++) {
+            for (p = 0; p < 4; p++) {
+                if (a[q][p] == 2048) {
+                    drawwin();
+                    break;
                 }
             }
         }
-        for (var q = 0; q < 3; q++) {
-            for (var i = 0; i < 3; i++) {
-                for (var j = 0; j < 4; j++) {
-                    if (a[i + 1][j] == 0) {
-                        a[i + 1][j] = a[i][j];
-                        a[i][j] = 0;
-                    }
-                }
-            }
+        if (q == 4 && p == 4) {
+            getvoida();
         }
-    }
-    var q, p;
-    for (q = 0; q < 4; q++) {
-        for (p = 0; p < 4; p++) {
-            if (a[q][p] == 2048) {
-                drawwin();
-                break;
-            }
-        }
-    }
-    if (q == 4 && p == 4) {
-        getvoida();
-    }
-    else {
-
     }
 }
 function getvoida() {
     var aq = new Array();
-    var ap = new Array();
     for (var q = 0; q < 4; q++) {
         for (var p = 0; p < 4; p++) {
             if (a[q][p] == 0) {
-                aq.push(q);
-                ap.push(p);
+                aq.push({ ro:q, ce:p });
             }
         }
     }
     if (aq.length > 0) {
-        var i = aq[Math.floor(Math.random() * aq.length)];
-        var j = ap[Math.floor(Math.random() * ap.length)];
+        var o = Math.floor(Math.random() * aq.length);
+        var i = aq[o].ro;
+        var j = aq[o].ce;
         a[i][j] = getrandomint();
         draw(a);
+        context.strokeStyle = "red";  //画布的笔触色 
+        context.fillStyle = "red";  //画布的填充色
+        context.lineWidth = 1;  //线条宽度 
+        context.beginPath(); //开始创建绘制
+        context.fillText(a[i][j], j * canvas.width / 4 + canvas.width / 8, i * canvas.height / 4 + canvas.height / 8);
+        context.stroke(); //绘制
     }
     else {
         drawlose();
@@ -221,4 +225,6 @@ function drawwin() {
     context.fillText("你赢了", 0, canvas.height / 4 * 3);
     context.stroke(); //绘制
 }
+getvoida();
+getvoida();
 draw(a);
